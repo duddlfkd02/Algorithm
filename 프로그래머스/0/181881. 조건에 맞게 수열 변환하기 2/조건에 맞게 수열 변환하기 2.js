@@ -1,26 +1,23 @@
 function solution(arr) {
     let x = 0;
-    let arr_next = [...arr]; 
 
     while (true) {
-        arr_next = arr_next.map(num => {
-            if (num >= 50 && num % 2 === 0) {
-                return num / 2;
-            } else if (num < 50 && num % 2 !== 0) {
-                return (num * 2) + 1;
-            } else {
-                return num; 
-            }
-        });
+        const prev = [...arr]; // 이전 상태 저장
 
-        x++; 
+        // 배열 변환
+        arr = arr.map(num => 
+            num >= 50 && num % 2 === 0 ? num / 2 :
+            num < 50 && num % 2 !== 0 ? (num * 2) + 1 :
+            num
+        );
 
-        if (JSON.stringify(arr) === JSON.stringify(arr_next)) {
-            break;
+        x++; // 변환 횟수 증가
+
+        // 현재 상태와 이전 상태를 비교
+        if (prev.every((value, i) => value === arr[i])) {
+            break; // 두 배열이 같으면 종료
         }
-
-        arr = [...arr_next];
     }
 
-    return x - 1;
+    return x - 1; // 변환 횟수 반환
 }
