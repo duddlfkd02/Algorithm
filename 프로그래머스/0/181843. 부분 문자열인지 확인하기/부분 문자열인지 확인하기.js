@@ -1,10 +1,4 @@
 function solution(my_string, target) {
-    let result = 0;
+    return my_string.includes(target) ? 1 : 0;
 
-    
-    if(my_string.indexOf(target) === -1){
-        return 0
-    }else{
-        return 1
-    }
 }
