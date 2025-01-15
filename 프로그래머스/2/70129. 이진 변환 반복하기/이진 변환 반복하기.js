@@ -4,8 +4,9 @@ function solution(s) {
     
     while(s !== "1"){
         //1. 주어진 문자열에서 0 제거하기
-        const removedZeroCount =  s.split("0").length - 1;
+        const removedZeroCount =  s.length - s.replace(/0/g, "").length;
         zeroCount += removedZeroCount;
+        
         s = s.replace(/0/g, "");
         
         // 2. 남은 문자열 길이
@@ -16,3 +17,4 @@ function solution(s) {
     }
     return [transforCount, zeroCount]
 }
+"11 -- 1- 1- 1 -- 1"
