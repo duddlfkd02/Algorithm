@@ -50,9 +50,16 @@ function solustion(sizes) {
 // 더 간딘한 방법
 
 function solution(sizes) {
+  // 1. 각 명함을 돌려서 (큰 값, 작은 값) 형태로 통일
   const rotated = sizes.map(([w, h]) => [Math.max(w, h), Math.min(w, h)]);
+  // 2. 돌린 명함들 중 가로(width)만 모아서 그 중 최댓값 찾기
   const maxWidth = Math.max(...rotated.map(([w, _]) => w));
+  // 3. 돌린 명함들 중 세로(height)만 모아서 그 중 최댓값 찾기
   const maxHeight = Math.max(...rotated.map(([_, h]) => h));
 
+  // 4. 최소 지갑 크기 = 최대 가로 * 최대 세로
   return maxWidth * maxHeight;
 }
+
+// [w, _] : 첫번째 값 w만 쓰고, 두번째 값은 무시
+// [_,h] : 첫번째 값은 무시, 두번째 값 h만 사용한다.
