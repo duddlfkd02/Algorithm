@@ -39,9 +39,6 @@ function solution(grid) {
 
   const dx = [1, -1, 0, 0];
   const dy = [0, 0, 1, -1];
-  const queue = [];
-
-  let area = 0;
 
   function dfs(i, j) {
     // 1. 범위 밖이거나, 물(0)이거나, 이미 방문한 경우
