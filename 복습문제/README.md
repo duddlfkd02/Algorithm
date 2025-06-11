@@ -95,5 +95,6 @@
 | 2025.06.09 | 격자 BFS                 | ✅   |
 | 2025.06.10 | KMP (Knuth–Morris–Pratt) | ✅   |
 | 2025.06.11 | 투포인터 + index         | ✅   |
+| 2025.06.12 | Union-Find               | ✅   |
 
 </details>
