@@ -96,5 +96,6 @@
 | 2025.06.10 | KMP (Knuth–Morris–Pratt) | ✅   |
 | 2025.06.11 | 투포인터 + index         | ✅   |
 | 2025.06.12 | Union-Find               | ✅   |
+| 2025.06.13 | MST                      | ✅   |
 
 </details>
